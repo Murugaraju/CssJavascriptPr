@@ -1,0 +1,42 @@
+.container{
+    /* border: solid black 2px; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.progress-container{
+    border: solid black 1px;
+    width: 100%;
+    padding: 4px;
+    
+}
+.progress-container .progressbar{
+    border: solid black 1px;
+
+    width: 100%;
+}
+.progressbar .barc{
+    width: 1%;
+    background-color: green;
+}
+.progress-container .bar-window{
+    border: solid black 1px;
+    width: fit-content;
+    position: relative;
+    align-items: center;
+    justify-self: center;
+  margin-left: 1%;
+
+    
+}
+.progress-container .bar-window .cone{
+    position: absolute;
+    width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid red;
+}

@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400");
+{
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    padding:0px;
+
+}
+:root
+{
+--clr: #222327
+}
+
+body
+{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: var(--clr);
+padding: 0px;
+}
+
+.navigation
+{
+    height: 70px;
+    width: 339px;
+    background: white;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.navigation ul
+{
+    display: flex;
+    width:273px;
+padding: 0px;
+   
+}
+.navigation ul li
+{
+position: relative;
+list-style: none;
+width: 70px;
+height: 70px;
+z-index: 1;
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    transition: 0.5s;
+    line-height: 66px;
+    color: var(--clr);
+    height: 30px;
+    align-items: center;
+    width: 30px;
+
+}
+.navigation ul li.active a .icon
+{
+    transform: translateY(-45px);
+  
+    
+    
+}
+.navigation ul li a .text
+{
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(20px);
+    top:12px;
+
+
+}
+.navigation ul li.active a .text
+{
+    transform: translateY(10px);
+    opacity: 1;
+    top:18px;
+}
+.indicator
+{
+    background:lightblue;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    left: 27px;
+    top: -56px;
+    transition: 0.5s;
+    border-radius: 50%;
+    border: solid 5px var(--clr);
+}
+.indicator::before
+{
+    content: '';
+    background:transparent;
+    position: absolute;
+    top: 51px;
+    height: 17px;
+    width: 17px;
+    right: 65px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -10px 0 0 var(--clr);
+}
+.indicator::after
+{
+    content: '';
+    background:transparent;
+    position: absolute;
+    top: 51px;
+    height: 17px;
+    width: 17px;
+    right: -12px;
+    border-top-left-radius: 25px;
+    box-shadow: 0 -10px 0 0 var(--clr);
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateX(calc(68px*0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(calc(68px*1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(calc(68px*2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(calc(68px*3));
+}
